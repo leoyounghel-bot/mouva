@@ -52,8 +52,8 @@
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/pdfme/pdfme.git
-cd pdfme
+git clone https://github.com/leoyounghel-bot/mouva.git
+cd mouva
 
 # Install root dependencies and build core packages
 npm install
