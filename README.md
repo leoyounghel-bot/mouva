@@ -26,7 +26,7 @@
 
 ## Demo
 
-https://github.com/leoyounghel-bot/mouva/raw/main/demo.mp4
+https://github.com/user-attachments/assets/63c2bf60-a92a-49bf-a3fa-0207290978f6
 
 > 📹 *AI-powered document generation in action — describe what you need, get a professional design instantly.*
 
