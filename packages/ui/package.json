@@ -76,7 +76,7 @@
     "rollup": "^4.44.1",
     "vite": "^7.1.7",
     "vite-plugin-css-injected-by-js": "^3.3.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^6.1.1"
   },
   "peerDependencies": {
     "@pdfme/common": "latest",
