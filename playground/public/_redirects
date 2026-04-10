@@ -1,0 +1,8 @@
+# Novita AI API proxy (must be before /api/*)
+/api/novita/*  https://api.novita.ai/:splat  200
+
+# Backend API proxy (Auth, Sessions, etc.)
+/api/*  https://api.mouva.ai/api/:splat  200
+
+# SPA fallback
+/*      /index.html   200

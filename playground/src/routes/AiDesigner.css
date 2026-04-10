@@ -1,0 +1,1799 @@
+/* AiDesigner.css - Ultra Minimal Design */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ============================================
+   ULTRA MINIMAL DESIGN (matching official website):
+   - Clean, minimal with generous whitespace
+   - Cool monochrome colors (blacks and grays)
+   - Inter typography
+   - Subtle borders
+   - Flat design
+   ============================================ */
+
+:root {
+    --black: #0a0a0a;
+    --gray-900: #171717;
+    --gray-700: #404040;
+    --gray-500: #737373;
+    --gray-300: #d4d4d4;
+    --gray-100: #f5f5f5;
+    --white: #ffffff;
+}
+
+/* Global Layout */
+.smart-doc-assistant {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.sda-content {
+    flex: 1;
+    display: flex;
+    background: var(--gray-100);
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Panels */
+.sda-pdf-panel {
+    background: #ffffff;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.sda-chat-panel,
+.sda-rag-panel {
+    background: var(--white);
+    border-radius: 0;
+    border-left: 1px solid var(--gray-100);
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Panel Header - Ultra Minimal Style */
+.sda-panel-header {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    border-bottom: 1px solid var(--gray-100);
+    background: var(--white);
+    flex-shrink: 0;
+}
+
+.sda-header-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.sda-header-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Header Buttons - Ultra Minimal Style */
+.sda-header-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.sda-header-btn:hover {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.sda-header-btn.exit {
+    color: var(--gray-500);
+}
+
+.sda-header-btn.exit:hover {
+    background: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+}
+
+/* PDFme Root */
+#pdfme-designer-root {
+    width: 100%;
+    height: 100%;
+}
+
+.ruler-container {
+    display: none !important;
+}
+
+/* PDFme Left Sidebar - Notion Style */
+.pdfme-designer-left-sidebar button {
+    border-radius: 4px !important;
+    transition: background 120ms ease-in !important;
+}
+
+.pdfme-designer-left-sidebar button:hover {
+    background: var(--gray-100) !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: none;
+}
+
+.pdfme-designer-left-sidebar button:hover svg {
+    color: var(--black) !important;
+}
+
+.pdfme-designer-left-sidebar button:active {
+    background: var(--gray-100) !important;
+    transform: none;
+    box-shadow: none !important;
+}
+
+/* ==================================
+   PDFme RightSidebar - Ultra Minimal Style
+   ================================== */
+.pdfme-ui-root-right-sidebar {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background: var(--white) !important;
+    border-left: 1px solid var(--gray-100) !important;
+}
+
+/* Field List Header */
+.pdfme-ui-root-right-sidebar > div:first-child {
+    background: var(--white) !important;
+    border-bottom: 1px solid var(--gray-100) !important;
+}
+
+/* Field List Title */
+.pdfme-ui-root-right-sidebar h3,
+.pdfme-ui-root-right-sidebar [class*="header"] {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    color: var(--black) !important;
+    font-weight: 500 !important;
+}
+
+/* Sidebar Toggle Button - more prominent styling */
+.pdfme-ui-root-sidebar-toggle {
+    background: var(--gray-100) !important;
+}
+
+.pdfme-ui-root-sidebar-toggle:hover {
+    background: var(--gray-300) !important;
+}
+
+/* Field List Items */
+.pdfme-ui-root-right-sidebar [class*="list-item"],
+.pdfme-ui-root-right-sidebar [class*="field-item"] {
+    border-color: var(--gray-100) !important;
+    transition: background 0.15s ease !important;
+}
+
+.pdfme-ui-root-right-sidebar [class*="list-item"]:hover,
+.pdfme-ui-root-right-sidebar [class*="field-item"]:hover {
+    background: var(--gray-100) !important;
+}
+
+/* Detail View styling */
+.pdfme-ui-root-right-sidebar input,
+.pdfme-ui-root-right-sidebar select {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    border-color: var(--gray-300) !important;
+    border-radius: 4px !important;
+}
+
+.pdfme-ui-root-right-sidebar input:focus,
+.pdfme-ui-root-right-sidebar select:focus {
+    border-color: var(--black) !important;
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.1) !important;
+    outline: none !important;
+}
+
+/* Buttons in RightSidebar */
+.pdfme-ui-root-right-sidebar button {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    border-radius: 4px !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Chat Messages Area - Notion Style */
+.sda-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--white);
+}
+
+/* Messages - Ultra Minimal Style */
+.sda-message {
+    max-width: 92%;
+    padding: 0;
+    border-radius: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.sda-message.user {
+    align-self: flex-end;
+    background: var(--gray-100);
+    color: var(--black);
+    border: none;
+    border-radius: 16px 16px 4px 16px;
+    padding: 12px 16px;
+}
+
+.sda-message.assistant {
+    align-self: flex-start;
+    background: transparent;
+    padding: 0;
+    max-width: 100%;
+    color: var(--black);
+}
+
+/* Chat Input Area - Ultra Minimal Style */
+.sda-chat-input-wrapper {
+    padding: 12px 16px 16px;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+}
+
+.sda-chat-input-box {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 10px 12px;
+    min-height: auto;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: none;
+}
+
+.sda-chat-input-box:focus-within {
+    border-color: var(--black);
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.1);
+}
+
+.sda-chat-input-box.dragging-over {
+    border-color: var(--black);
+    background-color: var(--gray-100);
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.15);
+}
+
+.sda-input-textarea {
+    flex: 1;
+    border: none;
+    background: transparent;
+    resize: none;
+    outline: none;
+    padding: 6px 2px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--black);
+    font-family: inherit;
+    min-height: 44px;
+    max-height: 120px;
+}
+
+.sda-input-textarea::placeholder {
+    color: var(--gray-500);
+}
+
+/* Input Actions */
+.sda-input-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 0;
+    border-top: none;
+}
+
+.sda-agent-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--gray-500);
+    padding: 4px 8px;
+    background: transparent;
+    border-radius: 4px;
+    border: none;
+}
+
+.sda-agent-pill.active {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+/* Send Button - Ultra Minimal Style */
+.sda-send-btn-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--gray-100);
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: none;
+}
+
+.sda-send-btn-circle:hover {
+    background: var(--gray-300);
+    transform: none;
+}
+
+.sda-send-btn-circle.active {
+    background: var(--black);
+    color: var(--white);
+    box-shadow: none;
+}
+
+.sda-send-btn-circle.active:hover {
+    opacity: 0.85;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Attachment Button - Notion Style */
+.sda-attach-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--gray-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 120ms ease-in;
+}
+
+.sda-attach-btn:hover {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.sda-attach-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Attachments Container */
+.sda-attachments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+/* File Preview Tag - Notion Style */
+.sda-file-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 400;
+    max-width: 200px;
+    transition: background 120ms ease-in;
+    animation: tagFadeIn 150ms ease-out;
+    background: var(--gray-100);
+    border: none;
+    color: var(--black);
+}
+
+@keyframes tagFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* PDF file tag */
+.sda-file-tag.pdf {
+    background: var(--gray-100);
+    border: none;
+    color: var(--black);
+}
+
+.sda-file-tag.pdf .sda-file-type-badge {
+    background: var(--black);
+}
+
+/* Image file tag */
+.sda-file-tag.image {
+    background: var(--gray-100);
+    border: none;
+    color: var(--gray-700);
+}
+
+.sda-file-tag.image .sda-file-type-badge {
+    background: var(--gray-700);
+}
+
+/* PPT file tag */
+.sda-file-tag.ppt {
+    background: rgba(234, 88, 12, 0.08);
+    border: none;
+    color: #ea580c;
+}
+
+.sda-file-tag.ppt .sda-file-type-badge {
+    background: #ea580c;
+}
+
+/* Copy element tag */
+.sda-file-tag.copy {
+    background: var(--gray-100);
+    border: none;
+    color: var(--gray-500);
+}
+
+.sda-file-tag.copy .sda-file-type-badge {
+    background: var(--gray-500);
+}
+
+/* Text element tag */
+.sda-file-tag.text {
+    background: var(--gray-100);
+    border: none;
+    color: var(--gray-700);
+}
+
+.sda-file-tag.text .sda-file-type-badge {
+    background: var(--gray-700);
+}
+
+/* Shape element tag */
+.sda-file-tag.shape {
+    background: var(--gray-100);
+    border: none;
+    color: var(--black);
+}
+
+.sda-file-tag.shape .sda-file-type-badge {
+    background: var(--black);
+}
+
+/* Table element tag */
+.sda-file-tag.table {
+    background: rgba(235, 87, 87, 0.1);
+    border: none;
+    color: #eb5757;
+}
+
+.sda-file-tag.table .sda-file-type-badge {
+    background: #eb5757;
+}
+
+/* Type badge inside tag */
+.sda-file-type-badge {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: white;
+    flex-shrink: 0;
+}
+
+/* File name inside tag */
+.sda-file-tag-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    font-weight: 400;
+}
+
+/* OCR status badge */
+.sda-file-ocr-badge {
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+/* Processing indicator */
+.sda-file-tag.processing {
+    opacity: 0.6;
+}
+
+.sda-file-tag.processing::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Remove button inside tag */
+.sda-file-tag-remove {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 120ms ease-in;
+    flex-shrink: 0;
+    margin-left: 2px;
+    color: var(--gray-400);
+}
+
+.sda-file-tag-remove:hover {
+    background: rgba(235, 87, 87, 0.15);
+    color: #eb5757;
+}
+
+.sda-file-tag-remove svg {
+    width: 10px;
+    height: 10px;
+}
+
+/* Legacy single file preview */
+.sda-file-preview {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: var(--gray-100);
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.sda-file-icon {
+    font-size: 16px;
+}
+
+.sda-file-name {
+    flex: 1;
+    color: var(--black);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.sda-file-status {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.sda-file-status.processing {
+    background: var(--gray-100);
+    color: var(--gray-700);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.sda-file-remove {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: transparent;
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 120ms ease-in;
+}
+
+.sda-file-remove:hover {
+    background: rgba(235, 87, 87, 0.1);
+    color: #eb5757;
+}
+
+/* ==================================
+   Chat Welcome Screen - Enhanced Design
+   ================================== */
+.sda-chat-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px 24px;
+    text-align: center;
+    min-height: auto;
+}
+
+/* Modern AI Document Icon - Minimalist */
+.sda-welcome-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: none;
+    border: 1px solid #e5e5e5;
+}
+
+.sda-welcome-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.sda-welcome-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Welcome Text Styling - Minimalist */
+.sda-welcome-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+}
+
+.sda-welcome-subtitle {
+    font-size: 14px;
+    color: #737373;
+    margin-bottom: 24px;
+    font-weight: 400;
+    max-width: 280px;
+}
+
+/* ==================================
+   Onboarding Steps
+   ================================== */
+.sda-onboarding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: #fafaf9;
+    border-radius: 12px;
+    border: 1px solid var(--gray-100);
+}
+
+.sda-onboarding-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sda-step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sda-step-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+.sda-step-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.sda-step-desc {
+    font-size: 11px;
+    color: var(--gray-500);
+}
+
+.sda-onboarding-arrow {
+    color: var(--gray-300);
+    font-size: 14px;
+    margin: 0 4px;
+}
+
+/* Templates Label */
+.sda-templates-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Suggestion Chips - Modern Glass Style */
+.sda-suggestion-chips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.sda-suggestion-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 16px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0a0a0a;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+.sda-suggestion-chip::before {
+    display: none;
+}
+
+.sda-suggestion-chip:hover {
+    background: #f5f5f5;
+    border-color: #d4d4d4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sda-suggestion-chip:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.sda-chip-emoji {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.sda-chip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.sda-chip-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sda-chip-img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.sda-suggestion-chip svg,
+.sda-chip-icon {
+    width: 36px;
+    height: 36px;
+    color: #0a0a0a;
+    stroke-width: 1.5;
+}
+
+/* ==================================
+   Onboarding Overlay — Card Carousel
+   ================================== */
+.sda-onboarding-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 245, 245, 0.85);
+    backdrop-filter: blur(8px);
+    animation: overlayFadeIn 0.3s ease-out;
+}
+
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Carousel container — clips the sliding cards */
+.sda-onboarding-carousel {
+    width: 420px;
+    max-height: 90vh;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+    animation: cardSlideIn 0.35s ease-out;
+}
+
+@keyframes cardSlideIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Slider track — holds all 5 cards in a row */
+.sda-onboarding-slider {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Each slide takes exactly 100% width of the carousel */
+.sda-onboarding-slide {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Individual card */
+.sda-onboarding-card-v2 {
+    position: relative;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Dismiss (X) button — corner of each card */
+.sda-onboarding-card-v2 .sda-onboarding-dismiss {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--gray-400);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 120ms ease;
+    z-index: 2;
+}
+
+.sda-onboarding-card-v2 .sda-onboarding-dismiss:hover {
+    background: var(--gray-100);
+    color: var(--gray-700);
+}
+
+.sda-onboarding-card-v2 .sda-onboarding-dismiss svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Illustration area */
+.sda-card-illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    background: #fafafa;
+    border-bottom: 1px solid var(--gray-100);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.sda-card-illustration img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    user-select: none;
+    pointer-events: none;
+}
+
+.sda-card-illustration svg {
+    width: 140px;
+    height: 140px;
+}
+
+/* Content area */
+.sda-card-content {
+    padding: 22px 24px 8px;
+}
+
+.sda-card-step-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--gray-400);
+    margin-bottom: 6px;
+}
+
+.sda-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+}
+
+.sda-card-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--gray-500);
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Footer with progress dots + Next/Done */
+.sda-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px 20px;
+}
+
+.sda-onboarding-progress {
+    display: flex;
+    gap: 6px;
+}
+
+.sda-progress-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gray-200, #e5e5e5);
+    transition: all 0.25s ease;
+}
+
+.sda-progress-dot.active {
+    background: var(--black);
+    transform: scale(1.15);
+}
+
+.sda-onboarding-next-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 20px;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 120ms ease;
+}
+
+.sda-onboarding-next-btn:hover {
+    background: var(--gray-900);
+    transform: translateY(-1px);
+}
+
+/* Typing Indicator - Notion Style */
+.sda-typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 12px 0;
+}
+
+.sda-typing-indicator span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gray-300);
+    animation: typing 1.4s ease-in-out infinite;
+}
+
+.sda-typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sda-typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.3; }
+    30% { transform: translateY(-6px); opacity: 1; }
+}
+
+/* PDFme Overrides */
+.pdfme-content-layer {
+    outline: none !important;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--black) !important;
+    box-shadow: none !important;
+}
+
+.sda-chat-input-box textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ==================================
+   Top Toolbar - Ultra Minimal Style
+   ================================== */
+.sda-top-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    padding: 8px 14px;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-100);
+    flex-shrink: 0;
+}
+
+/* Toolbar button - Ultra Minimal Style */
+.sda-toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    height: 28px;
+}
+
+.sda-toolbar-btn:hover {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.sda-toolbar-btn:active {
+    background: var(--gray-100);
+}
+
+.sda-toolbar-btn svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Active/Selected state */
+.sda-toolbar-btn.active {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.sda-toolbar-btn.active:hover {
+    background: var(--gray-300);
+}
+
+/* Primary action button */
+.sda-toolbar-btn.primary {
+    background: var(--black);
+    color: var(--white);
+}
+
+.sda-toolbar-btn.primary:hover {
+    opacity: 0.85;
+}
+
+/* Disabled state */
+.sda-toolbar-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Icon-only button variant */
+.sda-toolbar-btn.icon-only {
+    padding: 4px;
+    width: 28px;
+}
+
+/* Button group */
+.sda-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 8px;
+    border-left: 1px solid var(--gray-100);
+}
+
+.sda-toolbar-group:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* Mode toggle - Ultra Minimal Style */
+.sda-mode-toggle {
+    display: flex;
+    background: var(--gray-100);
+    padding: 2px;
+    border-radius: 4px;
+    border: none;
+}
+
+.sda-mode-btn {
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.sda-mode-btn:hover:not(.active) {
+    color: var(--black);
+}
+
+.sda-mode-btn.active {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Dropdown/Select style button */
+.sda-toolbar-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: background 120ms ease-in;
+    height: 28px;
+    min-width: 80px;
+}
+
+.sda-toolbar-select:hover {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.sda-toolbar-select svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    color: var(--gray-400);
+}
+
+/* Separator line */
+.sda-toolbar-divider {
+    width: 1px;
+    height: 16px;
+    background: var(--gray-100);
+    margin: 0 4px;
+}
+
+/* Export label badge */
+.sda-export-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: var(--gray-100);
+    color: var(--gray-500);
+}
+
+.sda-toolbar-btn.primary .sda-export-label {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Element Tags — Design Flow Monochrome */
+.sda-pasted-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0;
+}
+
+.sda-message-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.sda-message-elements .sda-element-tag {
+    animation: none;
+}
+
+@keyframes tagFadeIn {
+    from { opacity: 0; transform: translateY(4px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sda-element-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 5px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 450;
+    max-width: 220px;
+    transition: all 150ms ease;
+    animation: tagFadeIn 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--gray-100);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    color: var(--gray-700);
+    cursor: default;
+}
+
+.sda-element-tag:hover {
+    background: var(--gray-200, #e5e5e5);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Shared sub-element styles ---- */
+
+.sda-element-tag-type {
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    line-height: 1;
+    white-space: nowrap;
+    background: var(--black);
+    color: var(--white);
+}
+
+.sda-element-tag-name {
+    color: var(--gray-600, #525252);
+    font-weight: 450;
+    font-size: 12px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: -0.01em;
+}
+
+.sda-element-tag-remove {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    flex-shrink: 0;
+    margin-left: 0;
+    color: var(--gray-400);
+    opacity: 0;
+}
+
+.sda-element-tag:hover .sda-element-tag-remove {
+    opacity: 1;
+}
+
+.sda-element-tag-remove:hover {
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--black) !important;
+}
+
+.sda-element-tag-remove svg {
+    width: 10px;
+    height: 10px;
+}
+
+/* ==================================
+   Workflow Step Indicator — Cursor Style
+   ================================== */
+.sda-workflow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 4px 0;
+}
+
+.sda-workflow-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--gray-400);
+    transition: color 200ms ease, opacity 200ms ease;
+}
+
+.sda-workflow-step.sda-step-done {
+    color: var(--gray-500);
+}
+
+.sda-workflow-step.sda-step-active {
+    color: var(--black);
+}
+
+.sda-workflow-step.sda-step-pending {
+    color: var(--gray-300);
+}
+
+.sda-step-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.sda-step-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+@keyframes stepSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.sda-step-spinner {
+    animation: stepSpin 0.8s linear infinite;
+}
+
+.sda-workflow-result {
+    margin-top: 6px;
+    padding-top: 6px;
+    font-size: 13px;
+    color: var(--black);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==================================
+   AI Status Card - Notion Style
+   ================================== */
+.ai-status-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    background: #f7f6f3;
+    border-radius: 6px;
+    border: none;
+}
+
+.ai-status-card .status-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.ai-status-card .status-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.ai-status-card .status-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 2px;
+}
+
+.ai-status-card .status-subtitle {
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+/* Status card variants */
+.ai-status-card.thinking {
+    background: rgba(46, 170, 220, 0.08);
+}
+
+.ai-status-card.generating {
+    background: rgba(154, 109, 215, 0.08);
+}
+
+.ai-status-card.success {
+    background: rgba(77, 171, 154, 0.08);
+}
+
+.ai-status-card.error {
+    background: rgba(235, 87, 87, 0.08);
+}
+
+/* ==================================
+   History Modal - Notion Style
+   ================================== */
+.history-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 150ms ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.history-modal {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(15, 15, 15, 0.05), 0 3px 6px rgba(15, 15, 15, 0.1), 0 9px 24px rgba(15, 15, 15, 0.2);
+    max-width: 480px;
+    width: 90%;
+    max-height: 70vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: modalSlideIn 150ms ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.history-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.history-modal-header h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0;
+}
+
+.history-modal-close {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    transition: background 120ms ease-in;
+}
+
+.history-modal-close:hover {
+    background: var(--gray-100);
+    color: var(--black);
+}
+
+.history-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.history-session-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 120ms ease-in;
+    margin-bottom: 2px;
+}
+
+.history-session-item:hover {
+    background: var(--gray-100);
+}
+
+.history-session-item.active {
+    background: rgba(46, 170, 220, 0.08);
+}
+
+.history-session-item .session-preview {
+    flex: 1;
+    min-width: 0;
+}
+
+.history-session-item .session-title {
+    font-size: 14px;
+    color: var(--black);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.history-session-item .session-time {
+    font-size: 12px;
+    color: var(--gray-500);
+}
+
+.history-session-item .session-delete {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-300);
+    transition: all 120ms ease-in;
+    opacity: 0;
+}
+
+.history-session-item:hover .session-delete {
+    opacity: 1;
+}
+
+.history-session-item .session-delete:hover {
+    background: rgba(235, 87, 87, 0.1);
+    color: #eb5757;
+}
+
+/* Empty state */
+.history-empty {
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 14px;
+}
+
+/* ==================================
+   Batch Generate Modal - Notion Style
+   ================================== */
+.batch-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 15, 15, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 150ms ease-out;
+}
+
+.batch-modal {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(15, 15, 15, 0.05), 0 3px 6px rgba(15, 15, 15, 0.1), 0 9px 24px rgba(15, 15, 15, 0.2);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: modalSlideIn 150ms ease-out;
+}
+
+.batch-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.batch-modal-header h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black);
+    margin: 0;
+}
+
+.batch-modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.batch-modal-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--gray-100);
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Progress bar - Notion Style */
+.batch-progress-container {
+    margin-top: 16px;
+}
+
+.batch-progress-bar {
+    height: 4px;
+    background: var(--gray-100);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.batch-progress-fill {
+    height: 100%;
+    background: var(--black);
+    border-radius: 2px;
+    transition: width 300ms ease-out;
+}
+
+.batch-progress-text {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--gray-500);
+    text-align: center;
+}
+
+/* ==================================
+   Scrollbar - Notion Style
+   ================================== */
+.sda-chat-messages::-webkit-scrollbar,
+.history-modal-content::-webkit-scrollbar,
+.batch-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sda-chat-messages::-webkit-scrollbar-track,
+.history-modal-content::-webkit-scrollbar-track,
+.batch-modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sda-chat-messages::-webkit-scrollbar-thumb,
+.history-modal-content::-webkit-scrollbar-thumb,
+.batch-modal-content::-webkit-scrollbar-thumb {
+    background: var(--gray-100);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.sda-chat-messages::-webkit-scrollbar-thumb:hover,
+.history-modal-content::-webkit-scrollbar-thumb:hover,
+.batch-modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-200);
+    background-clip: padding-box;
+}
+
+/* ==================================
+   Responsive Adjustments
+   ================================== */
+@media (max-width: 768px) {
+    .sda-chat-welcome {
+        padding: 32px 16px;
+    }
+    
+    .sda-welcome-title {
+        font-size: 20px;
+    }
+    
+    .sda-suggestion-chips {
+        max-width: 100%;
+    }
+    
+    .sda-suggestion-chip {
+        flex: 1;
+        justify-content: center;
+        min-width: calc(50% - 4px);
+    }
+}
+
+/* ==================================
+   Dark Mode Support (Optional)
+   ================================== */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment to enable automatic dark mode
+    .smart-doc-assistant {
+        background: #191919;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .sda-content {
+        background: #202020;
+    }
+    
+    .sda-chat-panel,
+    .sda-rag-panel {
+        background: #191919;
+        border-left-color: rgba(255, 255, 255, 0.06);
+    }
+    */
+}

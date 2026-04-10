@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@pdfme/common": [
+        "../packages/common/src/index.ts"
+      ],
+      "@pdfme/schemas": [
+        "../packages/schemas/src/index.ts"
+      ],
+      "@pdfme/ui": [
+        "../packages/ui/src/index.ts"
+      ],
+      "@pdfme/generator": [
+        "../packages/generator/src/index.ts"
+      ]
+    },
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

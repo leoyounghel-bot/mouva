@@ -1,0 +1,35 @@
+*.log
+.DS_Store
+/node_modules
+/packages/*/node_modules
+/packages/common/src/version.ts
+.cache
+dist
+coverage/
+
+**/repomix-output.{txt,xml}
+
+**/__diff_output__/**
+
+# ===== Personal / Non-open-source files =====
+说明/
+_archived/
+
+# ===== Large resource directories =====
+chinese-art-fonts/
+fonts-main/
+lucide-main/
+openmoji-16.0.0/
+
+# ===== Sensitive files =====
+*.pem
+*.env
+*.env.*
+!.env.example
+!*.env.example
+
+# ===== Business / Financial documents (safety net) =====
+Bank_Statement*
+*.xlsx
+*.docx
+*.pptx
