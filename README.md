@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pdfme/pdfme/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License" />
+  <a href="https://github.com/leoyounghel-bot/mouva/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="Apache 2.0 License" />
   </a>
 </p>
 
@@ -23,6 +23,12 @@
 </p>
 
 ---
+
+## Demo
+
+https://github.com/leoyounghel-bot/mouva/raw/main/demo.mp4
+
+> 📹 *AI-powered document generation in action — describe what you need, get a professional design instantly.*
 
 ## Features
 
@@ -138,7 +144,7 @@ Additional thanks to:
 
 ## License
 
-MIT License — see [LICENSE.md](LICENSE.md) for details.
+Apache License 2.0 — see [LICENSE.md](LICENSE.md) for details.
 
 ---
 

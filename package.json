@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "author": "Mouva Team",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "pdf",
     "pdf-generation",
