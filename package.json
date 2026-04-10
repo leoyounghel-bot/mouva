@@ -72,7 +72,7 @@
     "rimraf": "^6.1.2",
     "ts-jest": "^29.4.6",
     "ts-jest-resolver": "^2.0.1",
-    "ts-loader": "^9.5.4",
+    "ts-loader": "^9.5.7",
     "ts-prune": "^0.10.3",
     "typescript": "^5.9.3"
   }
