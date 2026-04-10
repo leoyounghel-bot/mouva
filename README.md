@@ -46,7 +46,7 @@ https://github.com/leoyounghel-bot/mouva/raw/main/demo.mp4
 
 📐 **Template System** — Start from professional templates or create your own
 
-🌐 **Open Source** — MIT licensed, fully self-hostable
+🌐 **Open Source** — Apache 2.0 licensed, fully self-hostable
 
 ## Getting Started
 
